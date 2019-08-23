@@ -9,9 +9,9 @@
  */
 function mycorp_greeting_node_info() {
     return array(
-        'product' => array(
+        'greetings' => array(
             'name' => t('Greeting'),
-            'base' => 'greeting',
+            'base' => 'greetings',
             'description' => t('You can set new Greeting here'),
             'has_title' => TRUE,
             'title_label' => t('Greeting title')
@@ -22,6 +22,6 @@ function mycorp_greeting_node_info() {
 /**
  * Implement hook_form()
  */
-function mycorp_greeting_form($node, $form_state) {
+function greetings_form($node, $form_state) {
     return node_content_form($node, $form_state);
 }
