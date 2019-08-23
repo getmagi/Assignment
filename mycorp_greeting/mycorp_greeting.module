@@ -1,0 +1,27 @@
+<?php
+/**
+* @file
+* Module file for mycorp_greeting
+*/
+
+/**
+ * Implements hook_node_info()
+ */
+function mycorp_greeting_node_info() {
+    return array(
+        'product' => array(
+            'name' => t('Greeting'),
+            'base' => 'greeting',
+            'description' => t('You can set new Greeting here'),
+            'has_title' => TRUE,
+            'title_label' => t('Greeting title')
+         )
+    );
+}
+
+/**
+ * Implement hook_form()
+ */
+function mycorp_greeting_form($node, $form_state) {
+    return node_content_form($node, $form_state);
+}
