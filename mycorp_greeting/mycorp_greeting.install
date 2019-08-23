@@ -11,7 +11,7 @@ function mycorp_greeting_install() {
  * Implements hook_uninstall().
  */
 function mycorp_greeting_uninstall() {
-    $ournewtype = 'product';
+    $ournewtype = 'greetings';
     $sql = 'SELECT nid FROM {node} n WHERE n.type = :type';
     $result = db_query($sql, array(':type' => $ournewtype));
     $nodeids = array();
